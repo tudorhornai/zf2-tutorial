@@ -2,6 +2,7 @@
 return array(
     'modules' => array(
         'Application',
+        'Admin',
         'Album',
     ),
     'module_listener_options' => array( 

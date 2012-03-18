@@ -13,6 +13,7 @@ return array(
                     'broker'       => 'Zend\Mvc\Controller\PluginBroker',
                 ),
             ),
+			 
             'Zend\Mvc\Controller\PluginBroker' => array(
                 'parameters' => array(
                     'loader' => 'Zend\Mvc\Controller\PluginLoader',
@@ -47,6 +48,21 @@ return array(
                                 ),
                             ),
                         ),
+						'admin' => array(
+								'type' => 'Zend\Mvc\Router\Http\Segment',
+								'options' => array(
+									'route' => '/[:module[/:controller[/:action]]]',
+									'constraints' => array(
+										'module' => 'admin',
+										'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+										'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+									),
+									'defaults' => array(
+										'controller' => 'admin',
+										'action'     => 'index',
+									),
+								),
+							),
                     ),
                 ),
             ),
