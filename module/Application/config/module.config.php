@@ -25,16 +25,16 @@ return array(
                 'parameters' => array(
                     'routes' => array(
                         'default' => array(
-                            'type'    => 'Zend\Mvc\Router\Http\Segment',
+                            'type' => 'Zend\Mvc\Router\Http\Segment',
                             'options' => array(
-                                'route'    => '/[:controller[/:action]]',
+                                'route' => '/[:controller[/:action]]',
                                 'constraints' => array(
                                     'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                    'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 ),
                                 'defaults' => array(
                                     'controller' => 'Application\Controller\IndexController',
-                                    'action'     => 'index',
+                                    'action' => 'index',
                                 ),
                             ),
                         ),
@@ -47,22 +47,7 @@ return array(
                                     'action'     => 'index',
                                 ),
                             ),
-                        ),
-						'admin' => array(
-								'type' => 'Zend\Mvc\Router\Http\Segment',
-								'options' => array(
-									'route' => '/[:module[/:controller[/:action]]]',
-									'constraints' => array(
-										'module' => 'admin',
-										'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-										'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-									),
-									'defaults' => array(
-										'controller' => 'admin',
-										'action'     => 'index',
-									),
-								),
-							),
+                        ), 
                     ),
                 ),
             ),
